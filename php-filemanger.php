@@ -1,20 +1,41 @@
 <?php
+/*
+	php-filemanger.php - New PHP File Manger Project
+	Copytight (C) 2022- anid
+	https://github.com/aniddev/php-filemanger
+	
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU Affero General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+	
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU Affero General Public License for more details.
+	You should have received a copy of the GNU Affero General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	
+	GNU License by
+	yinyfilemanger.php - php file manger.
+	Copyright (C) 2015 koreapyj koreapyj0@gmail.com
+*/
 //Default Configuration
 $CONFIG = '{"lang":"en","error_reporting":false,"show_hidden":false,"hide_Cols":false,"theme":"light"}';
 
 /**
- * H3K | Tiny File Manager V2.5.2
- * @author Prasath Mani | CCP Programmers
- * @email ccpprogrammers@gmail.com
- * @github https://github.com/prasathmani/tinyfilemanager
- * @link https://tinyfilemanager.github.io
+ * anid | php-filemanger V1.0.0
+ * @author anid(Fork. Existing author ccpprogrammers back)
+ * @email anid@anid.ga
+ * @github https://github.com/aniddev/php-filemanger
+ * @link https://phpfilemanager.github.io
  */
 
 //TFM version
-define('VERSION', '2.5.2');
+define('VERSION', '1.0.0');
 
 //Application Title
-define('APP_TITLE', 'Tiny File Manager');
+define('APP_TITLE', 'PHP File Manger');
 
 // --- EDIT BELOW CONFIGURATION CAREFULLY ---
 
@@ -75,7 +96,7 @@ $iconv_input_encoding = 'UTF-8';
 
 // date() format for file modification date
 // Doc - https://www.php.net/manual/en/function.date.php
-$datetime_format = 'm/d/Y g:i A';
+$datetime_format = 'Y/m/d g:i A';
 
 // Allowed file extensions for create and rename files
 // e.g. 'txt,html,css,js'
@@ -109,7 +130,7 @@ $sticky_navbar = true;
 // Maximum file upload size
 // Increase the following values in php.ini to work properly
 // memory_limit, upload_max_filesize, post_max_size
-$max_upload_size_bytes = 5000000000; // size 5,000,000,000 bytes (~5GB)
+$max_upload_size_bytes = 500000000000; // size 5,000,000,000 bytes (~5GB)
 
 // Possible rules are 'OFF', 'AND' or 'OR'
 // OFF => Don't check connection IP, defaults to OFF
@@ -124,6 +145,7 @@ $ip_silent = true;
 $ip_whitelist = array(
     '127.0.0.1',    // local ipv4
     '::1'           // local ipv6
+    '0.0.0.0'       // local ipv4_2
 );
 
 // IP-addresses, both ipv4 and ipv6
